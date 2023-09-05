@@ -1,0 +1,64 @@
+.top-header {
+    background-color: rgb(0, 102, 255) !important;
+}
+.top-header-contacts > a {
+    margin-right: 150px;
+}
+.top-header-btn {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-btn {
+    margin-left: auto;
+    margin-right: auto;
+}
+.header {
+    background-color: rgb(255, 255, 0) !important;
+    font-family: 'Preahvihear', sans-serif;
+}
+.header-title {
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+}
+
+.header-contacts {
+    color: rgb(255, 255, 0);
+}
+.header-contacts-icons {
+    margin-right: 10px;
+}
+
+.menu-new {
+    font-family: 'Preahvihear', sans-serif;
+    margin-left: -70px;
+}
+.header-menu > a {
+    margin-left: 150px;
+    color: rgb(0, 102, 255);
+}
+.header-menu > div {
+    margin-left: 150px;
+    color: rgb(0, 102, 255);
+}
+.header-categor::after {
+    width: 200px;
+}
+.header-category > div {
+    background-color: rgb(0, 102, 255);
+}
+.header-category > div > a {
+    color: rgb(255, 255, 0);
+}
+.header-category > div::after {
+    background-color: rgb(255, 255, 0);
+}
+.header-category > div > a:hover {
+    color: rgb(0, 102, 255);
+    background-color: rgb(255, 255, 0);
+}
+.header-category > a {
+    color: rgb(0, 102, 255);
+}
