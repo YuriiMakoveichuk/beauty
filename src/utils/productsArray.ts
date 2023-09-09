@@ -366,7 +366,7 @@ const productsArray: Product[] = [
         type: 'Уточка',
         text: 'Материал: атлас',
         price: 20,
-        category: 'Уточка',
+        category: 'уточка',
     },
     {
         id: 46,
@@ -374,7 +374,7 @@ const productsArray: Product[] = [
         type: 'Уточка',
         text: 'Материал: атлас',
         price: 20,
-        category: 'Уточка',
+        category: 'уточка',
     },
     {
         id: 47,
@@ -382,7 +382,7 @@ const productsArray: Product[] = [
         type: 'Уточка',
         text: 'Материал: атлас',
         price: 20,
-        category: 'Уточка',
+        category: 'уточка',
     },
 ]
 

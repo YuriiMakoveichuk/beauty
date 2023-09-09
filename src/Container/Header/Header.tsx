@@ -7,6 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Header.scss'
+import { Link } from 'react-router-dom'
 
 type Props = {}
 
@@ -24,24 +25,33 @@ const Header = (props: Props) => {
                     />
                     <Navbar.Collapse className="menu-new" id="basic-navbar-nav">
                         <Nav className="me-auto header-menu">
-                            <Nav.Link href="#home">ПОЧАТОК</Nav.Link>
+                            <Nav.Link>
+                                <Link to={'/'}> УСІ ТОВАРИ</Link>
+                            </Nav.Link>
 
                             <NavDropdown
                                 className="header-category"
                                 title="КАТЕГОРІЇ"
                                 id="basic-nav-dropdown"
                             >
-                                <NavDropdown.Item href="#action/3.1">
-                                    ПОВ'ЯЗКИ
+                                <NavDropdown.Item>
+                                    <Link to={'/bandage'}>ПОВ'ЯЗКИ</Link>
                                 </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
-                                    ОБРУЧІ
+                                <NavDropdown.Item>
+                                    <Link to={'/hoop'}>ОБРУЧІ</Link>
                                 </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">
-                                    ГУМКИ ДЛЯ ВОЛОССЯ
+                                <NavDropdown.Item>
+                                    <Link to={'/gum'}>РЕЗИНКИ ДЛЯ ВОЛОССЯ</Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <Link to={'/point'}>
+                                        УТОЧКИ ДЛЯ ВОЛОССЯ
+                                    </Link>
                                 </NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link href="#link">КОШИК</Nav.Link>
+                            <Nav.Link>
+                                <Link to={'/cart'}>КОШИК</Link>
+                            </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
