@@ -12,13 +12,17 @@ type Props = {
 const ProductsListItem = ({ title, type, text, price }: Props) => {
     return (
         <>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={title} />
+            <Card style={{ width: '250px', marginTop: '30px' }}>
+                <Card.Img
+                    variant="top"
+                    style={{ height: '250px' }}
+                    src={title}
+                />
                 <Card.Body>
-                    <Card.Title>{type}</Card.Title>
+                    <Card.Title style={{ height: '50px' }}>{type}</Card.Title>
                     <Card.Text>{text}</Card.Text>
                     <Card.Text>ціна: {price} грн.</Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary">Додати у кошик</Button>
                 </Card.Body>
             </Card>
         </>

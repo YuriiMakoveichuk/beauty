@@ -1,0 +1,23 @@
+.price {
+    background-color: rgb(200, 255, 112);
+}
+
+.price-card {
+    background-color: rgb(217, 247, 243);
+    width: 450px;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.price-img {
+    width: 100%;
+    text-transform: none;
+    transition: transform 800ms ease;
+}
+.price-img:hover {
+    transform: scale(1.05);
+}
+.price-btn > a {
+    color: rgb(255, 255, 0);
+    text-decoration: none;
+}
