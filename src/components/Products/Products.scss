@@ -1,0 +1,21 @@
+.quantity {
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.quantity-btn {
+    background-color: yellow;
+    color: blue;
+    width: 36px;
+}
+.quantity-input {
+    width: 100px;
+    border: solid 1px blue;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: blue;
+}

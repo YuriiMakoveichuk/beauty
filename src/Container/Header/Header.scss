@@ -1,7 +1,7 @@
 .top-header {
     background-color: rgb(0, 102, 255) !important;
 }
-.top-header-contacts > a {
+.top-header a {
     margin-right: 150px;
 }
 .top-header-btn {
@@ -16,6 +16,7 @@
 .header {
     background-color: rgb(255, 255, 0) !important;
     font-family: 'Preahvihear', sans-serif;
+    height: 100px;
 }
 .header-title {
     width: 100px;
@@ -24,10 +25,10 @@
     display: flex;
 }
 
-.header-contacts {
+.top-header-contacts {
     color: rgb(255, 255, 0);
 }
-.header-contacts-icons {
+.top-header-contacts-icons {
     margin-right: 10px;
 }
 
@@ -35,30 +36,34 @@
     font-family: 'Preahvihear', sans-serif;
     margin-left: -70px;
 }
+.menu-new a {
+    text-decoration: none;
+    color: rgb(0, 102, 255);
+}
+.header-menu {
+    margin-left: 100px;
+}
 .header-menu > a {
     margin-left: 150px;
     color: rgb(0, 102, 255);
 }
-.header-menu > div {
+.header-menu div {
     margin-left: 150px;
+}
+.header-menu div a {
     color: rgb(0, 102, 255);
 }
 .header-categor::after {
     width: 200px;
 }
-.header-category > div {
-    background-color: rgb(0, 102, 255);
-}
-.header-category > div > a {
+
+.header-category a {
     color: rgb(255, 255, 0);
 }
-.header-category > div::after {
+.header-category div::after {
     background-color: rgb(255, 255, 0);
 }
-.header-category > div > a:hover {
+.header-category div a:hover {
     color: rgb(0, 102, 255);
     background-color: rgb(255, 255, 0);
-}
-.header-category > a {
-    color: rgb(0, 102, 255);
 }

@@ -21,13 +21,19 @@ const TopHeader = (props: Props) => {
                         aria-controls="basic-navbar-nav"
                     />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto top-header-contacts">
-                            <Nav.Link href="#home" className="header-contacts ">
-                                <BsTelephone className="header-contacts-icons" />
+                        <Nav className="me-auto ">
+                            <Nav.Link
+                                href="#home"
+                                className="top-header-contacts "
+                            >
+                                <BsTelephone className="top-header-contacts-icons" />
                                 +380677983989
                             </Nav.Link>
-                            <Nav.Link href="#link" className="header-contacts ">
-                                <TfiEmail className="header-contacts-icons" />
+                            <Nav.Link
+                                href="#link"
+                                className="top-header-contacts"
+                            >
+                                <TfiEmail className="top-header-contacts-icons" />
                                 snake77778@gmail.com
                             </Nav.Link>
                         </Nav>

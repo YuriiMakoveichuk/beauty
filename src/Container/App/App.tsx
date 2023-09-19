@@ -8,6 +8,7 @@ import Hoop from 'components/Hoop/Hoop'
 import Gum from 'components/Gum/Gum'
 import Point from 'components/Point/Point'
 import Main from 'Container/Main/Main'
+import Footer from 'Container/Footer/Footer'
 
 type Props = {}
 
@@ -24,6 +25,7 @@ const App = (props: Props) => {
                 <Route path="/point" element={<Point />} />
                 <Route path="/cart" element={<CartPage />} />
             </Routes>
+            <Footer />
         </>
     )
 }

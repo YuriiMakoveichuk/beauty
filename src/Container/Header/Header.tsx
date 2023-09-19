@@ -17,7 +17,7 @@ const Header = (props: Props) => {
             <Navbar expand="lg" className="bg-body-tertiary header">
                 <Container>
                     <Navbar.Brand href="#home" className="header-title">
-                        <img src="images/logo.png" alt="Fake foto" />
+                        <img src="images/logo_1.png" alt="Fake foto" />
                     </Navbar.Brand>
                     <Navbar.Toggle
                         className="header-btn"

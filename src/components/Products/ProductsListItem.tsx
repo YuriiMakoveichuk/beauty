@@ -1,5 +1,8 @@
+import { InputGroup } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
+
+import './Products.scss'
 
 type Props = {
     // id: number
@@ -12,16 +15,30 @@ type Props = {
 const ProductsListItem = ({ title, type, text, price }: Props) => {
     return (
         <>
-            <Card style={{ width: '250px', marginTop: '30px' }}>
+            <Card
+                style={{
+                    width: '250px',
+                    marginTop: '30px',
+                    marginBottom: '30px',
+                }}
+            >
                 <Card.Img
                     variant="top"
                     style={{ height: '250px' }}
                     src={title}
                 />
-                <Card.Body>
+                <Card.Body
+                    style={{ display: 'grid', justifyContent: 'center' }}
+                >
                     <Card.Title style={{ height: '50px' }}>{type}</Card.Title>
                     <Card.Text>{text}</Card.Text>
                     <Card.Text>ціна: {price} грн.</Card.Text>
+                    <div className="quantity">
+                        <Button className="quantity-btn">-</Button>
+                        <InputGroup className="quantity-input">1</InputGroup>
+                        <Button className="quantity-btn">+</Button>
+                    </div>
+
                     <Button variant="primary">Додати у кошик</Button>
                 </Card.Body>
             </Card>
