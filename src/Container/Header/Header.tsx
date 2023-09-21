@@ -17,7 +17,7 @@ const Header = (props: Props) => {
             <Navbar expand="lg" className="bg-body-tertiary header">
                 <Container>
                     <Navbar.Brand href="#home" className="header-title">
-                        <img src="images/logo_1.png" alt="Fake foto" />
+                        <img src="images/logo.png" alt="Fake foto" />
                     </Navbar.Brand>
                     <Navbar.Toggle
                         className="header-btn"
@@ -26,14 +26,15 @@ const Header = (props: Props) => {
                     <Navbar.Collapse className="menu-new" id="basic-navbar-nav">
                         <Nav className="me-auto header-menu">
                             <Nav.Link>
-                                <Link to={'/'}> УСІ ТОВАРИ</Link>
+                                <Link to={'/'}>ТОВАРИ</Link>
                             </Nav.Link>
 
                             <NavDropdown
-                                className="header-category"
                                 title="КАТЕГОРІЇ"
                                 id="basic-nav-dropdown"
+                                className="header-category"
                             >
+                                {/* <div className="header-category"> */}
                                 <NavDropdown.Item>
                                     <Link to={'/bandage'}>ПОВ'ЯЗКИ</Link>
                                 </NavDropdown.Item>
@@ -48,6 +49,7 @@ const Header = (props: Props) => {
                                         УТОЧКИ ДЛЯ ВОЛОССЯ
                                     </Link>
                                 </NavDropdown.Item>
+                                {/* </div> */}
                             </NavDropdown>
                             <Nav.Link>
                                 <Link to={'/cart'}>КОШИК</Link>

@@ -16,11 +16,10 @@
 .header {
     background-color: rgb(255, 255, 0) !important;
     font-family: 'Preahvihear', sans-serif;
-    height: 100px;
 }
 .header-title {
     width: 100px;
-    height: 50px;
+    height: 100px;
     align-items: center;
     display: flex;
 }
@@ -45,25 +44,29 @@
 }
 .header-menu > a {
     margin-left: 150px;
+    margin-right: 150px;
     color: rgb(0, 102, 255);
 }
-.header-menu div {
-    margin-left: 150px;
-}
+
 .header-menu div a {
     color: rgb(0, 102, 255);
 }
-.header-categor::after {
-    width: 200px;
+.header-menu a::after {
+    color: rgb(0, 102, 255);
 }
 
-.header-category a {
+.header-category {
+    width: 100px;
+}
+.dropdown-menu {
+    background: rgb(0, 102, 255);
+    width: 250px;
+}
+.header-category div a {
     color: rgb(255, 255, 0);
 }
-.header-category div::after {
-    background-color: rgb(255, 255, 0);
-}
-.header-category div a:hover {
+
+.header-category a:hover {
     color: rgb(0, 102, 255);
     background-color: rgb(255, 255, 0);
 }

@@ -23,14 +23,14 @@ const TopHeader = (props: Props) => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto ">
                             <Nav.Link
-                                href="#home"
+                                // href="#home"
                                 className="top-header-contacts "
                             >
                                 <BsTelephone className="top-header-contacts-icons" />
                                 +380677983989
                             </Nav.Link>
                             <Nav.Link
-                                href="#link"
+                                // href="#link"
                                 className="top-header-contacts"
                             >
                                 <TfiEmail className="top-header-contacts-icons" />
