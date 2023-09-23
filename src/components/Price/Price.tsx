@@ -18,7 +18,6 @@ const Price = (props: Props) => {
                         <Card className="price-card">
                             <Card.Img
                                 className="price-img"
-                                // variant="top"
                                 src="./images/o_1.jpg"
                             />
                             <Card.Body>

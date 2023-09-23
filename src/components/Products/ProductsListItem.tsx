@@ -20,6 +20,7 @@ const ProductsListItem = ({ title, type, text, price }: Props) => {
                     width: '250px',
                     marginTop: '30px',
                     marginBottom: '30px',
+                    backgroundColor: 'rgb(217, 247, 243)',
                 }}
             >
                 <Card.Img
@@ -30,7 +31,9 @@ const ProductsListItem = ({ title, type, text, price }: Props) => {
                 <Card.Body
                     style={{ display: 'grid', justifyContent: 'center' }}
                 >
-                    <Card.Title style={{ height: '50px' }}>{type}</Card.Title>
+                    <Card.Title style={{ height: '50px', fontSize: '30px' }}>
+                        {type}
+                    </Card.Title>
                     <Card.Text>{text}</Card.Text>
                     <Card.Text>ціна: {price} грн.</Card.Text>
                     <div className="quantity">
