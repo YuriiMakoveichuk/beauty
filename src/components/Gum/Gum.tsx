@@ -6,9 +6,9 @@ import ProductsListItem from 'components/Products/ProductsListItem'
 
 import productsArray from 'utils/productsArray'
 
-type Props = {}
+type Props = { addProductToCart: (id: number, count: number) => void }
 
-const Gum = (props: Props) => {
+const Gum = ({ addProductToCart }: Props) => {
     return (
         <>
             <div className="product-text"> РЕЗИНКИ ДЛЯ ВОЛОССЯ</div>
@@ -20,11 +20,12 @@ const Gum = (props: Props) => {
                             .map(({ id, title, type, text, price }) => (
                                 <Col xs={12} md={4} xl={3} key={id}>
                                     <ProductsListItem
-                                        // id={id}
+                                        id={id}
                                         title={title}
                                         type={type}
                                         text={text}
                                         price={price}
+                                        addProductToCart={addProductToCart}
                                     />
                                 </Col>
                             ))}

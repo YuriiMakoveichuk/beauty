@@ -2,16 +2,22 @@ import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
-
-// import logo from 'images/logo.png'
+import { BsFillCartFill } from 'react-icons/bs'
+import Modal from 'react-bootstrap/Modal'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Header.scss'
 import { Link } from 'react-router-dom'
+import CartHeader from 'components/CartHeader/CartHeader'
+import { useState } from 'react'
 
-type Props = {}
+type Props = {
+    productsInCart: { [id: number]: number }
+}
 
-const Header = (props: Props) => {
+const Header = ({ productsInCart }: Props) => {
+    const [smShow, setSmShow] = useState(false)
+
     return (
         <>
             <Navbar expand="lg" className="bg-body-tertiary header">
@@ -54,6 +60,28 @@ const Header = (props: Props) => {
                             <Nav.Link>
                                 <Link to={'/cart'}>КОШИК</Link>
                             </Nav.Link>
+                            {/* </Nav> */}
+                            <BsFillCartFill
+                                className="header-basket"
+                                onClick={() => setSmShow(true)}
+                            />
+                            <Modal
+                                size="sm"
+                                show={smShow}
+                                onHide={() => setSmShow(false)}
+                                aria-labelledby="example-modal-sizes-title-sm"
+                            >
+                                <Modal.Header closeButton>
+                                    <Modal.Title id="example-modal-sizes-title-sm">
+                                        Ваше замовлення
+                                    </Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <CartHeader
+                                        productsInCart={productsInCart}
+                                    />
+                                </Modal.Body>
+                            </Modal>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

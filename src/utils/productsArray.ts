@@ -11,7 +11,7 @@ const productsArray: Product[] = [
     {
         id: 1,
         title: './images/o_1.jpg',
-        type: 'Обруч біло-синій',
+        type: 'Обруч',
         text: 'Материал: атлас',
         price: 20,
         category: 'обруч',
@@ -19,7 +19,7 @@ const productsArray: Product[] = [
     {
         id: 2,
         title: './images/o_2.jpg',
-        type: 'Обруч жовто-блакитний',
+        type: 'Обруч',
         text: 'Материал: атлас',
         price: 30,
         category: 'обруч',
@@ -27,7 +27,7 @@ const productsArray: Product[] = [
     {
         id: 3,
         title: './images/o_3.jpg',
-        type: 'Обруч з квіточками',
+        type: 'Обруч',
         text: 'Материал: атлас',
         price: 50,
         category: 'обруч',

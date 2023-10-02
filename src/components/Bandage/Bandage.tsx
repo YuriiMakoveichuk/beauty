@@ -6,9 +6,11 @@ import ProductsListItem from 'components/Products/ProductsListItem'
 
 import productsArray from 'utils/productsArray'
 
-type Props = {}
+type Props = {
+    addProductToCart: (id: number, count: number) => void
+}
 
-const Bandage = (props: Props) => {
+const Bandage = ({ addProductToCart }: Props) => {
     return (
         <>
             <div className="product-text">ПОВ'ЯЗКИ</div>
@@ -20,11 +22,12 @@ const Bandage = (props: Props) => {
                             .map(({ id, title, type, text, price }) => (
                                 <Col xs={12} md={4} xl={3} key={id}>
                                     <ProductsListItem
-                                        // id={id}
+                                        id={id}
                                         title={title}
                                         type={type}
                                         text={text}
                                         price={price}
+                                        addProductToCart={addProductToCart}
                                     />
                                 </Col>
                             ))}

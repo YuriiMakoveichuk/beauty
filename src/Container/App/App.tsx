@@ -2,28 +2,78 @@ import TopHeader from 'Container/Header/TopHeader'
 import Header from 'Container/Header/Header'
 
 import { Routes, Route } from 'react-router-dom'
-import CartPage from 'components/Cart/CartPage'
+import CartPage from 'components/CartPage/CartPage'
 import Bandage from 'components/Bandage/Bandage'
 import Hoop from 'components/Hoop/Hoop'
 import Gum from 'components/Gum/Gum'
 import Point from 'components/Point/Point'
 import Main from 'Container/Main/Main'
 import Footer from 'Container/Footer/Footer'
+import { useState } from 'react'
 
-type Props = {}
+type ProductsInCart = {
+    [id: number]: number
+}
 
-const App = (props: Props) => {
+const App = () => {
+    const [productsInCart, setProductsInCart] = useState<ProductsInCart>({
+        1: 5,
+        2: 5,
+    })
+
+    const addProductToCart = (id: number, count: number) => {
+        setProductsInCart((prevState) => ({
+            ...prevState,
+            [id]: (prevState[id] || 0) + count,
+        }))
+    }
+
+    const removeProductFromCart = (id: number) => {
+        setProductsInCart((prevState) => {
+            let prevProductInCart = { ...prevState }
+            delete prevProductInCart[id]
+            return prevProductInCart
+        })
+    }
+    const changeProductQuantity = (id: number, count: number) => {
+        setProductsInCart((prevState) => ({
+            ...prevState,
+            [id]: count,
+        }))
+    }
+
     return (
         <>
             <TopHeader />
-            <Header />
+            <Header productsInCart={productsInCart} />
             <Routes>
                 <Route path="/" element={<Main />} />
-                <Route path="/bandage" element={<Bandage />} />
-                <Route path="/hoop" element={<Hoop />} />
-                <Route path="/gum" element={<Gum />} />
-                <Route path="/point" element={<Point />} />
-                <Route path="/cart" element={<CartPage />} />
+                <Route
+                    path="/bandage"
+                    element={<Bandage addProductToCart={addProductToCart} />}
+                />
+                <Route
+                    path="/hoop"
+                    element={<Hoop addProductToCart={addProductToCart} />}
+                />
+                <Route
+                    path="/gum"
+                    element={<Gum addProductToCart={addProductToCart} />}
+                />
+                <Route
+                    path="/point"
+                    element={<Point addProductToCart={addProductToCart} />}
+                />
+                <Route
+                    path="/cart"
+                    element={
+                        <CartPage
+                            productsInCart={productsInCart}
+                            removeProductFromCart={removeProductFromCart}
+                            changeProductQuantity={changeProductQuantity}
+                        />
+                    }
+                />
             </Routes>
             <Footer />
         </>

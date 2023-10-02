@@ -21,7 +21,7 @@ const Price = (props: Props) => {
                                 src="./images/o_1.jpg"
                             />
                             <Card.Body>
-                                <Card.Title style={{ height: '50px' }}>
+                                <Card.Title className="price-title">
                                     ОБРУЧІ
                                 </Card.Title>
 
@@ -37,7 +37,7 @@ const Price = (props: Props) => {
                                 src="./images/p_1.jpg"
                             />
                             <Card.Body>
-                                <Card.Title style={{ height: '50px' }}>
+                                <Card.Title className="price-title">
                                     ПОВ'ЯЗКИ
                                 </Card.Title>
 
@@ -55,7 +55,7 @@ const Price = (props: Props) => {
                                 src="./images/r_1.jpg"
                             />
                             <Card.Body>
-                                <Card.Title style={{ height: '50px' }}>
+                                <Card.Title className="price-title">
                                     РЕЗИНКИ
                                 </Card.Title>
 
@@ -71,7 +71,7 @@ const Price = (props: Props) => {
                                 src="./images/y_1.jpg"
                             />
                             <Card.Body>
-                                <Card.Title style={{ height: '50px' }}>
+                                <Card.Title className="price-title">
                                     УТОЧКИ
                                 </Card.Title>
 

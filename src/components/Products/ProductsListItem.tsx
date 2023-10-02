@@ -1,18 +1,36 @@
-import { InputGroup } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
+import { useState } from 'react'
+
+import Quantity from 'components/Quantity/Quantity'
 
 import './Products.scss'
 
 type Props = {
-    // id: number
+    id: number
     title: string
     type: string
     text?: string
     price: number
+    addProductToCart: (id: number, count: number) => void
 }
 
-const ProductsListItem = ({ title, type, text, price }: Props) => {
+const ProductsListItem = ({
+    id,
+    title,
+    type,
+    text,
+    price,
+    addProductToCart,
+}: Props) => {
+    const [count, setCount] = useState<number>(1)
+
+    const onDecrenentClick = () => {
+        setCount((prevState) => prevState - 1)
+    }
+    const onIncrenentClick = () => {
+        setCount((prevState) => prevState + 1)
+    }
     return (
         <>
             <Card
@@ -31,18 +49,20 @@ const ProductsListItem = ({ title, type, text, price }: Props) => {
                 <Card.Body
                     style={{ display: 'grid', justifyContent: 'center' }}
                 >
-                    <Card.Title style={{ height: '50px', fontSize: '30px' }}>
-                        {type}
-                    </Card.Title>
+                    <Card.Title style={{ fontSize: '30px' }}>{type}</Card.Title>
                     <Card.Text>{text}</Card.Text>
                     <Card.Text>ціна: {price} грн.</Card.Text>
-                    <div className="quantity">
-                        <Button className="quantity-btn">-</Button>
-                        <InputGroup className="quantity-input">1</InputGroup>
-                        <Button className="quantity-btn">+</Button>
-                    </div>
-
-                    <Button variant="primary">Додати у кошик</Button>
+                    <Quantity
+                        count={count}
+                        onDecrenentClick={onDecrenentClick}
+                        onIncrenentClick={onIncrenentClick}
+                    />
+                    <Button
+                        variant="primary"
+                        onClick={() => addProductToCart(id, count)}
+                    >
+                        Додати у кошик
+                    </Button>
                 </Card.Body>
             </Card>
         </>
