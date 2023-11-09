@@ -22,9 +22,12 @@ const Header = ({ productsInCart }: Props) => {
         <>
             <Navbar expand="lg" className="bg-body-tertiary header">
                 <Container>
-                    <Navbar.Brand href="#home" className="header-title">
-                        <img src="images/logo.png" alt="Fake foto" />
-                    </Navbar.Brand>
+                    <div className="header-title">
+                        <Navbar.Brand href="#home" className="header-title">
+                            <img src="images/logo.png" alt="Fake foto" />
+                        </Navbar.Brand>
+                    </div>
+
                     <Navbar.Toggle
                         className="header-btn"
                         aria-controls="basic-navbar-nav"
@@ -36,6 +39,7 @@ const Header = ({ productsInCart }: Props) => {
                             </Nav.Link>
 
                             <NavDropdown
+                                // style={{ color: 'blue' }}
                                 title="КАТЕГОРІЇ"
                                 id="basic-nav-dropdown"
                                 className="header-category"

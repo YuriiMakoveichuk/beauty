@@ -8,9 +8,10 @@ import productsArray from 'utils/productsArray'
 
 type Props = {
     addProductToCart: (id: number, count: number) => void
+    minCount: number
 }
 
-const Bandage = ({ addProductToCart }: Props) => {
+const Bandage = ({ addProductToCart, minCount }: Props) => {
     return (
         <>
             <div className="product-text">ПОВ'ЯЗКИ</div>
@@ -20,7 +21,7 @@ const Bandage = ({ addProductToCart }: Props) => {
                         {productsArray
                             .filter((item) => item.category === "пов'язка")
                             .map(({ id, title, type, text, price }) => (
-                                <Col xs={12} md={4} xl={3} key={id}>
+                                <Col xs={12} md={6} lg={4} xl={3} key={id}>
                                     <ProductsListItem
                                         id={id}
                                         title={title}
@@ -28,6 +29,7 @@ const Bandage = ({ addProductToCart }: Props) => {
                                         text={text}
                                         price={price}
                                         addProductToCart={addProductToCart}
+                                        minCount={minCount}
                                     />
                                 </Col>
                             ))}

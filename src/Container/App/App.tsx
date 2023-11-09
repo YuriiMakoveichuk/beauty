@@ -50,19 +50,36 @@ const App = () => {
                 <Route path="/" element={<Main />} />
                 <Route
                     path="/bandage"
-                    element={<Bandage addProductToCart={addProductToCart} />}
+                    element={
+                        <Bandage
+                            addProductToCart={addProductToCart}
+                            minCount={1}
+                        />
+                    }
                 />
                 <Route
                     path="/hoop"
-                    element={<Hoop addProductToCart={addProductToCart} />}
+                    element={
+                        <Hoop
+                            addProductToCart={addProductToCart}
+                            minCount={1}
+                        />
+                    }
                 />
                 <Route
                     path="/gum"
-                    element={<Gum addProductToCart={addProductToCart} />}
+                    element={
+                        <Gum addProductToCart={addProductToCart} minCount={1} />
+                    }
                 />
                 <Route
                     path="/point"
-                    element={<Point addProductToCart={addProductToCart} />}
+                    element={
+                        <Point
+                            addProductToCart={addProductToCart}
+                            minCount={1}
+                        />
+                    }
                 />
                 <Route
                     path="/cart"

@@ -11,6 +11,7 @@ type Props = {
     productCount: number
     removeProductFromCart: (id: number) => void
     changeProductQuantity: (id: number, count: number) => void
+    minCount: number
 }
 
 const CartProductListItemExtended = ({
@@ -19,6 +20,7 @@ const CartProductListItemExtended = ({
     productCount,
     removeProductFromCart,
     changeProductQuantity,
+    minCount,
 }: Props) => {
     return (
         <div>
@@ -46,11 +48,17 @@ const CartProductListItemExtended = ({
                     <Quantity
                         count={productCount}
                         onDecrenentClick={() =>
-                            changeProductQuantity(product.id, productCount - 1)
+                            productCount === 1
+                                ? removeProductFromCart(product.id)
+                                : changeProductQuantity(
+                                      product.id,
+                                      productCount - 1
+                                  )
                         }
                         onIncrenentClick={() =>
                             changeProductQuantity(product.id, productCount + 1)
                         }
+                        minCount={0}
                     />
                     <Button
                         variant="primary"

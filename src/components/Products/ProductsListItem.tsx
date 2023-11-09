@@ -13,6 +13,7 @@ type Props = {
     text?: string
     price: number
     addProductToCart: (id: number, count: number) => void
+    minCount: number
 }
 
 const ProductsListItem = ({
@@ -22,15 +23,18 @@ const ProductsListItem = ({
     text,
     price,
     addProductToCart,
+    minCount,
 }: Props) => {
     const [count, setCount] = useState<number>(1)
 
     const onDecrenentClick = () => {
         setCount((prevState) => prevState - 1)
     }
+
     const onIncrenentClick = () => {
         setCount((prevState) => prevState + 1)
     }
+
     return (
         <>
             <Card
@@ -56,6 +60,7 @@ const ProductsListItem = ({
                         count={count}
                         onDecrenentClick={onDecrenentClick}
                         onIncrenentClick={onIncrenentClick}
+                        minCount={1}
                     />
                     <Button
                         variant="primary"

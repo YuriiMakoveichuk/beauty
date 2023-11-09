@@ -1,3 +1,4 @@
+// @media (min-width: 380px) {
 .top-header {
     background-color: rgb(0, 102, 255) !important;
 }
@@ -5,13 +6,13 @@
     margin-right: 150px;
 }
 .top-header-btn {
-    width: 100px;
+    // width: 100px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 10px;
 }
 .header-btn {
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 10px;
 }
 .header {
     background-color: rgb(255, 255, 0) !important;
@@ -43,24 +44,24 @@
     margin-left: 100px;
 }
 .header-menu > a {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
     color: rgb(0, 102, 255);
 }
 
 .header-menu div a {
     color: rgb(0, 102, 255);
 }
-.header-menu a::after {
-    color: rgb(0, 102, 255);
+.menu-new a:hover {
+    color: black;
 }
 
 .header-category {
-    width: 100px;
+    margin-left: 100px;
 }
 .dropdown-menu {
     background: rgb(0, 102, 255);
-    width: 250px;
+    width: 230px;
 }
 .header-category div a {
     color: rgb(255, 255, 0);
@@ -74,6 +75,26 @@
     color: rgb(0, 102, 255);
 }
 .header-basket {
-    font-size: 30px;
-    color: rgb(0, 102, 255);
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .header-category {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media (min-width: 1024px) {
+    .header-category {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media (min-width: 1200px) {
+    .header-basket {
+        display: block;
+        font-size: 30px;
+        color: rgb(0, 102, 255);
+        cursor: pointer;
+    }
 }

@@ -6,9 +6,12 @@ import ProductsListItem from 'components/Products/ProductsListItem'
 
 import productsArray from 'utils/productsArray'
 
-type Props = { addProductToCart: (id: number, count: number) => void }
+type Props = {
+    addProductToCart: (id: number, count: number) => void
+    minCount: number
+}
 
-const Gum = ({ addProductToCart }: Props) => {
+const Gum = ({ addProductToCart, minCount }: Props) => {
     return (
         <>
             <div className="product-text"> РЕЗИНКИ ДЛЯ ВОЛОССЯ</div>
@@ -18,7 +21,7 @@ const Gum = ({ addProductToCart }: Props) => {
                         {productsArray
                             .filter((item) => item.category === 'резинка')
                             .map(({ id, title, type, text, price }) => (
-                                <Col xs={12} md={4} xl={3} key={id}>
+                                <Col xs={12} md={6} lg={4} xl={3} key={id}>
                                     <ProductsListItem
                                         id={id}
                                         title={title}
@@ -26,6 +29,7 @@ const Gum = ({ addProductToCart }: Props) => {
                                         text={text}
                                         price={price}
                                         addProductToCart={addProductToCart}
+                                        minCount={minCount}
                                     />
                                 </Col>
                             ))}

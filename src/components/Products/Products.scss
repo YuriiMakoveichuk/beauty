@@ -1,3 +1,4 @@
+// @media (min-width: 380px) {
 .quantity {
     display: flex;
     width: 200px;
@@ -25,11 +26,28 @@
 }
 .product-text {
     justify-content: center;
-    font-size: 50px;
+    font-size: 20px;
     color: rgb(255, 255, 0);
     background-color: rgb(0, 102, 255);
-    height: 100px;
+    // height: 100px;
     display: flex;
     align-items: center;
     font-family: 'Noto Serif Display', serif;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+}
+
+@media (min-width: 1024px) {
+    .product-text {
+        font-size: 35px;
+        letter-spacing: 5px;
+        word-spacing: 25px;
+    }
+}
+@media (min-width: 1200px) {
+    .product-text {
+        font-size: 50px;
+        letter-spacing: 8px;
+        word-spacing: 30px;
+    }
 }

@@ -13,6 +13,7 @@ const Price = (props: Props) => {
     return (
         <>
             <div className="price">
+                <div className="product-text"> КАТЕГОРІЇ </div>
                 <Container>
                     <Row style={{ justifyContent: 'space-evenly' }}>
                         <Card className="price-card">
